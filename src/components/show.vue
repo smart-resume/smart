@@ -23,10 +23,11 @@ export default {
           textStyle:{
             color:"#ffffff",
           },
-          top:"0%"
+          bottom:"-2%"
         },
         radar: {
           // shape: 'circle',
+  
           indicator: [
             { name: "学业成绩", max: 1000 },
             { name: "实习经历", max: 1000 },
@@ -71,10 +72,10 @@ export default {
     
       <style>
 #box {
-  padding-top: 30px;
+  padding-top: 20px;
   padding-left: 80px;
   width: 350px;
-  height: 350px;
+  height: 360px;
   display: flex;
   justify-content: center;
   align-items: center;

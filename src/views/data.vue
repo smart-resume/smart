@@ -1,12 +1,15 @@
 <template>
     <div class="background">
     <div class="box1">
-        <div class="left"><show1/><show2/></div>
+        <div class="left"><show1/><show8/></div>
         <div class="middle">
             <h1>分析结果</h1>
             <div class="show0"><Show/></div>
         </div>
-        <div class="right">            <h2>学生个人能力层次分析图</h2><show3/></div>
+        <div class="right"> 
+            <p class="wenzi" style="color:white; margin-left:20px; margin-right:20px;font-size:24px;text-align: left;margin-top:50px">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp智能简历分析结果:小明同学在校期间的学业成绩水平一般,但是具有丰富的实习经历加分,参与到企业提供的真实项目中,熟悉前端知识路线,具有VUE、REACT项目框架开发经验,根据学生个人综合能力,适合担任WEB前端开发人员工作"</p>
+            <el-button @click="speak" style="margin-top:30px">语音播报</el-button> 
+        </div>
     </div>
     <div class="box2">
         <div class="left1"><show5/></div>
@@ -14,7 +17,7 @@
             <!-- <h1>分析结果</h1> -->
             <div class="show00"><show6/></div>
         </div>
-        <div class="right1"> <show8/></div>
+        <div class="right1"> <img src="../assets/2.png" alt="" width="200" height="200"></div>
     </div>
 
     </div>
@@ -33,6 +36,9 @@ import Show from "../components/show.vue"
 // import { TitleComponent, LegendComponent } from 'echarts/components';
 // import { RadarChart } from 'echarts/charts';
 // import { CanvasRenderer } from 'echarts/renderers';
+
+import Speech from "speak-tts";
+import { set } from 'lodash';
 export default {
     name:"data",
     data(){
@@ -50,7 +56,22 @@ export default {
         show6, 
         show7,
         show8,      
-    }
+    },
+    mounted(){
+        this.speechInits();
+    },
+    methods:{
+            speak(){
+                this.speech.speak({text:"智能简历分析结果：小明同学在校期间的学业成绩水平一般,但是具有丰富的实习经历加分,参与到企业提供的真实项目中,熟悉前端知识路线,具有VUE、REACT项目框架开发经验,根据学生个人综合能力,适合担任WEB前端开发人员工作"}).then(()=>{
+                    console.log("读取成功");
+                })
+            },
+            speechInits(){
+                this.speech = new Speech();
+                this.speech.setLanguage("zh-CN");
+                this.speech.init().then(()=>{})
+            },
+         }
 
 }
 </script>
@@ -90,6 +111,7 @@ display:flex;
     margin-right:10px;  
     /* background: pink; */
     border:2px solid white;
+    border-bottom: 0;
 }
 .show0{
     margin-left:80px;
@@ -130,10 +152,12 @@ display:flex;
 }
 .right1{
     flex:1.2;
-    margin-top:10px;
+    /* margin-top:10px; */
     margin-right:10px;  
     /* background: pink; */
     margin-bottom:10px;
     border:2px solid white;
+    border-top:0;
 }
+
 </style>

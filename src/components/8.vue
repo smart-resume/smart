@@ -49,6 +49,9 @@ export default {
           min: 10,
           max: 100,
           text: ["High Score", "Low Score"],
+          textStyle:{
+            color:"#ffffff",
+          },
           // Map the score column to color
           dimension: 0,
           inRange: {

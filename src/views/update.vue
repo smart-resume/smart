@@ -20,12 +20,14 @@
         jpg/png files with a size less than 500KB.
       </div>
     </template> -->
+	<!-- <p>{{ $store.state.num }}</p> -->
     <el-button class="button1">上传简历</el-button>
 
   </el-upload>
 				<el-button class="button1">在线编写</el-button>
+
 			</form>
-			<p @click="$router.push({path:'/'})">返回</p>
+			<p @click="$router.back();$store.state.num=1" >返回</p>
 
 		</div>
     </div>
@@ -41,7 +43,9 @@
             }
         },  
         methods:{
-
+			show(){
+				return $router.go(-1)
+			}
         }
      }
  </script>
