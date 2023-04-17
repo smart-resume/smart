@@ -2,7 +2,7 @@
 
     <div class="nav">
 
-        <div class="lefter">智能招聘<i>&thinsp;&thinsp;&thinsp;&thinsp;</i><img class="image" src="../assets/images/photo2.png" width="15" height="15">&thinsp;杭州</div>
+        <div class="lefter">智能招聘<i>&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;</i><img class="image" src="../assets/images/photo2.png" width="15" height="15">&thinsp;杭州</div>
         <div class="header-left">
         <router-link class="a" to = '/'>
             <div class="icon"><i></i></div> 
@@ -34,19 +34,23 @@
         </div>
     </div> 
 
+
+
 </template>
+
 <script>
     export default{
         name:'Header'
     }
 </script>
+
 <style  scoped>
 
 
 .nav{
 
     background: rgb(10, 17, 1);
-    padding:10px 10px 10px 10px;
+    padding:15px 15px 10px 10px;
     justify-content: center;
     justify-items: center;
     position:fixed;
@@ -55,19 +59,20 @@
     top: 0;
     display: flex;
 
-    height:20px;
+    height:30px;
     
 
     z-index:10;
 }
 .image{
-    
+    width: 20px;
+    height: 20px;
     color:white;
 }
 .lefter{
     flex:1;
-    
-    color:rgba(255, 255, 255, 0.747);
+    font-size: 20px;
+    color:rgba(86, 125, 253, 0.747);
 }
 .middle{
     flex:2.5;
@@ -90,6 +95,9 @@
     /* background: #882f2f; */
     color: rgba(255, 255, 255, 0.747);
     text-decoration: none;
+}
+.a:hover{
+    color:rgb(0,190,189)
 }
 .b{
 

@@ -64,7 +64,9 @@
             </div>
             
         </div>
-        <hr>
+
+        
+
         <div class="box2">
 
             <div class="box2_1">
@@ -72,7 +74,7 @@
                 :default-active="activeIndex"
                 class="el-menu-demo"
                 mode="horizontal"
-                background-color=#545c64
+                background-color=rgb(131,149,167)
                 text-color="#fff"
                 active-text-color="#ffd04b"
                 @select="handleSelect"
@@ -186,7 +188,7 @@
                     </div>
                     
                 </div>
-                <el-pagination
+                <el-pagination 
                 layout="prev, pager, next"
                 :total="20"     
                 @size-change="handleSizeChange"
@@ -293,6 +295,7 @@ import Footer from '../components/footer.vue';
 }
 .box2{
     display:flex;
+    background-color:rgb(237,247,248);
 }
 .box2_1{
     flex:7;
@@ -338,32 +341,64 @@ import Footer from '../components/footer.vue';
 .xiala1{
     font-size:smaller;
     text-align: center;
-    width:80px;
-    height:50px;
+    width:90px;
+    height:48px;
 
     margin-left:80px;
 
-    background-color:rgb(233, 230, 230);
+    background-color:rgba(241, 236, 236, 0.699);
 }
 .form1{
     width:700px;
     /* height:50px; */
     /* font-size: 100px; */
 }
-input::-webkit-input-placeholder{
-        font-size: 12px;
-        }
-.button1{
 
-    width:120px;
-    height:50px;
+select{
+    border-radius:5px;
 
-    /* color:grey; */
 }
+
+input{
+    outline-style: none ;
+    border: 1px solid #ccc; 
+    border-radius: 3px;
+    padding: 10px 13px;
+    width: 620px;
+    font-size: 15px;
+    font-weight: 700;
+    
+    border-radius: 0;
+}
+
+input:focus{
+    border-color: #6eb1e7;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
+}
+
+
+.button1 {
+    
+    width: 120px;
+    height: 50px;
+    background-color: #6eb1e7;
+    border-radius: 7px;
+    display: flex;
+    font-size: 20px;
+    border: none;   
+      outline: none;  
+  
+    /* color:grey; */
+  }
+  
+
 .b{
-    font-size:10px;
-    margin-left:50px;
-    vertical-align:bottom;
+    font-size:15px;
+    margin-left:40px;
+    vertical-align:baseline;
+    
     /* padding-bottom:15px; */
     /* top:10px; */
     /* background:yellow; */
@@ -398,9 +433,10 @@ margin-left:450px;
     height:100px;
     width:auto;
     margin-left:90px;
-    margin-top:0;
-    border-bottom:1px solid black ;
-    background: rgb(230, 212, 212);
+    margin-top:8px;
+    
+    border-radius:6px ;
+    background: rgb(255, 255, 255);
     display:flex;
 }
 .left{
@@ -416,21 +452,25 @@ flex:6;
 
     display: flex;
     align-items:left;
-    color:red;
+    color:rgb(31, 28, 28);
     font-weight:bold;
+    font-size: 18px;
     padding:20px 0 0px 30px;
     margin-bottom:0px;
     border:0;
     line-height:0px;
 
 }
+.p1:hover{
+    color:rgb(0,190,189)
+}
 .p2{
     display: flex;
     align-items:left;
-    color:red;
+    color:rgb(241, 82, 54);
     font-weight:bold;
-    font-size:21px;
-    padding:10px 0 0px 30px;
+    font-size:20px;
+    padding:15px 0 0px 30px;
     margin-bottom:0px;
     border:0;
     line-height:0px;
@@ -438,8 +478,11 @@ flex:6;
 .p2_1{
     margin-top:20px;
     line-height:10px;
-    color:orangered;
+    color:rgb(118, 120, 121);
 
+}
+.p2_1:hover{
+    color:rgb(0,190,189)
 }
 /* .p2{
 
@@ -455,6 +498,11 @@ flex:6;
 }
 .right1{
     margin-top:0px;
+    background-color: #6eb1e7;
+    border: none;
+}
+.right1:hover{
+    color:rgb(250, 223, 102)
 }
 
 </style>

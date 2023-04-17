@@ -17,6 +17,11 @@
     :default-active="activeIndex"
     class="el-menu-demo"
     mode="horizontal"
+    background-color=rgb(131,149,167)
+                text-color="#fff"
+                active-text-color=rgb(69,170,242)
+                
+                
     @select="handleSelect"
   >
     <el-menu-item index="1" @click="one()">关注</el-menu-item>
@@ -268,6 +273,7 @@ import opinion from "../opinion.json"
 }
 .xiala{
     font-size:large;
+    border-radius:5px ;
     text-align: center;
     width:100px;
     height:50px;
@@ -285,6 +291,7 @@ import opinion from "../opinion.json"
 }
 .box1{
     display:flex;
+    background-color: rgb(237,247,248);
 }
 .left{
     /* height:1500px; */
@@ -304,7 +311,7 @@ import opinion from "../opinion.json"
     width:400px;
     margin-left:30px;
     margin-top:60px;
-    background:linear-gradient(pink,rgb(67, 219, 67));
+    background:linear-gradient(rgb(253, 216, 222),rgb(247, 247, 247));
     border-radius: 2%;
 }
 .right2{
@@ -312,7 +319,7 @@ import opinion from "../opinion.json"
     width:400px;
     margin-left:30px;
     margin-top:60px;
-    background:linear-gradient(rgb(67, 219, 67),rgb(189, 180, 180));
+    background:linear-gradient(rgb(169, 252, 169),rgb(255, 255, 255));
     border-radius: 2%;
 }
 h2{
@@ -326,7 +333,10 @@ h2{
 }
 .a1{
     text-decoration: none;
-    color:black;
+    color:rgb(14, 13, 13);
+}
+.a1:hover{
+    color:rgb(77, 123, 248)
 }
 .boxmax{
     float: left;
@@ -335,13 +345,14 @@ h2{
     line-height:7px;
 }
 .show1{
+    
     height:150px;
     width:auto;
     margin-left:100px;
-    margin-top:0;
-    border-bottom:2px solid black ;
-    /* margin-bottom:3px; */
-    background: rgb(235, 225, 225);
+    margin-top:10px;
+    border-bottom:none ;
+    border-radius:10px ;
+    background: rgb(255, 255, 255);
     display:flex;
 }
 .leftpro{
@@ -357,28 +368,55 @@ margin-left:450px;
 }
 .ti{
     text-align:left;
-    padding-left:30px;
+    padding-left:35px;
     padding-top:10px;
-    font-size:larger;
+    font-size:20px;
 }
-
+.ti:hover{
+    color:rgb(0,190,189)
+}
 .setup{
     margin-top:30px;
 }
-.input{
-    /* padding:20px 50px 0 20px; */
-    width:1100px;
-    margin-left:100px;
-    display:flex;
-    align-items:flex-end;
+input{
+    outline-style: none ;
+    border: 1px solid #ccc; 
+    border-radius: 3px;
+    padding: 10px 13px;
+    width: 620px;
+    font-size: 15px;
+    font-weight: 700;
+    
+    border-radius: 0;
 }
-.button{
-margin-left:100px;
-width:100px;
-height: 40px;
-}
-/* .input1{
-    margin-top:20px;
-} */
 
+input:focus{
+    border-color: #6eb1e7;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
+}
+
+
+.button1 {
+    
+    width: 120px;
+    height: 50px;
+    background-color: #6eb1e7;
+    border-radius: 7px;
+    display: flex;
+    font-size: 20px;
+    border: none;   
+      outline: none;  
+  
+    /* color:grey; */
+  }
+  
+  .button{
+    margin-left:50px ;
+  }
+  .input1{
+    
+    width: 800px;
+  }
 </style>

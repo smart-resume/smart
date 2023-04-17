@@ -1,6 +1,6 @@
 <template>
     <div class="main">
-        <div class="flex-box" style="flex-direction: column; ">
+        <div class="flex-box" style="flex-direction: column; margin-top: 110px;">
             <div class="flex-box" style="justify-content: space-between; text-align: left; ">
                 <div>
                     <h2>你为什么需要一份好的简历</h2>
@@ -17,8 +17,8 @@
                 <el-image style="height: 200px; width: 320px; margin-top: 20px;" src="/analyse/1.png" />
             </div>
             <div style="margin-top: 30px; "><h2>产品简介</h2></div>
-            <div style="margin-top: 30px; ">
-                <div v-for="(item, index) in data" class="flex-box" style="justify-content: space-between; margin-bottom: 10px; ">
+            <div style="margin-top: 50px; ">
+                <div v-for="(item, index) in data" :key="index" class="flex-box" style="justify-content: space-between; margin-bottom: 120px; ">
                     <el-image style="width: 450px; height: 330px; " :src="item.url" />
                     <div class="flex-box" style="width: 470px; align-items: center; ">
                         <div>
@@ -69,8 +69,10 @@ import { method } from 'lodash';
                  }
              ]
          }
+         
 
      },
+     
  }
 </script>
 

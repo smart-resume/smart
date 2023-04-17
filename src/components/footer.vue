@@ -38,7 +38,7 @@ body{
     /* padding-bottom: 50px; */
     background:black;
     /* padding:10px 10px 10px 10px; */
-    padding-top:10px;
+    padding-top:20px;
     margin:10px  0px 10px;
     justify-content: center;
     justify-items: center;
@@ -73,6 +73,10 @@ middle{
     margin-left:40px;
     text-decoration: none;
     float:left;
+}
+
+.a:hover{
+    color:rgb(0,190,189)
 }
 .b{
     font-size: medium;
